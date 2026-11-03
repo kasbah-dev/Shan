@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a855f7">
+  <title>A Special Surprise for Shanice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sparkles" aria-hidden="true"></div>
+
+  <main class="page">
+    <section class="welcome card" id="welcome">
+      <div class="top-icon" aria-hidden="true">💌</div>
+      <p class="eyebrow">A LITTLE SURPRISE IS WAITING</p>
+      <h1>Someone has a<br><span>special surprise</span><br>for you!</h1>
+      <p class="intro">But first, tell us your name...</p>
+
+      <form id="nameForm">
+        <label for="visitorName">What's your name?</label>
+        <input id="visitorName" name="name" type="text" placeholder="Enter your name here" autocomplete="off" required>
+        <button type="submit">Unlock My Surprise <span>💝</span></button>
+        <p class="error" id="errorMessage" role="alert" aria-live="polite"></p>
+      </form>
+      <p class="tiny-note">A little happiness is just one step away ✨</p>
+    </section>
+
+    <section class="celebration card hidden" id="celebration" aria-live="polite">
+      <div class="confetti" aria-hidden="true">🎉 ✨ 🎓 🌸 🎊</div>
+      <p class="eyebrow">THIS MOMENT IS ALL YOURS</p>
+      <h1>Congratulations,<br><span>Shanice!</span></h1>
+      <div class="big-emoji" aria-hidden="true">🎓💖</div>
+      <h2>You did it!</h2>
+      <p class="message">Today is a special moment, and you deserve to be celebrated!</p>
+      <p class="message">Congratulations on completing your KPSEA examinations! You've taken an important step in your education journey. Every lesson you've learned, every effort you've made and every challenge you've overcome has brought you this far.</p>
+      <p class="message">This is only the beginning of greater things. Keep believing in yourself, keep dreaming big and never stop working towards your goals.</p>
+
+      <div class="success-banner">
+        <span>🌟</span>
+        <strong>YOUR SUCCESS<br>IS ON THE WAY!</strong>
+        <span>🌟</span>
+      </div>
+
+      <p class="message">May your future be filled with wonderful opportunities, happiness, wisdom and achievements beyond your expectations.</p>
+      <p class="message">Whatever the results may be, always be proud of how far you've come. Keep shining, keep smiling and keep making us proud!</p>
+      <p class="closing">With lots of love,<br><strong>Someone who wishes you nothing but the best. 💕</strong></p>
+      <button class="again-button" id="backButton" type="button">Replay the surprise ↻</button>
+    </section>
+  </main>
+
+  <footer>Made with love, just for Shanice 💗</footer>
+  <script src="script.js"></script>
+</body>
+</html>

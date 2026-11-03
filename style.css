@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --deep: #581c87;
+  --ink: #352044;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'DM Sans', Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 12% 15%, rgba(255,255,255,.8) 0 2px, transparent 3px),
+    radial-gradient(circle at 85% 28%, rgba(255,255,255,.7) 0 2px, transparent 3px),
+    linear-gradient(135deg, #fce7f3, #ede9fe 52%, #fae8ff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 16px 14px;
+  overflow-x: hidden;
+}
+.page { width: 100%; max-width: 680px; margin: auto; }
+.card {
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(255,255,255,.95);
+  border-radius: 28px;
+  padding: clamp(26px, 6vw, 54px);
+  text-align: center;
+  box-shadow: 0 22px 70px rgba(91, 33, 182, .15);
+  backdrop-filter: blur(12px);
+  animation: rise .75s ease both;
+}
+.top-icon { font-size: 3rem; margin-bottom: 8px; animation: bob 2.5s ease-in-out infinite; }
+.eyebrow { color: #a21caf; letter-spacing: .16em; font-size: .72rem; font-weight: 700; }
+h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.35rem, 8vw, 4rem);
+  line-height: 1.08;
+  margin: 16px 0;
+  color: #4c1d65;
+}
+h1 span { color: var(--pink); }
+.intro { color: #755b83; font-size: 1.05rem; margin: 20px 0 28px; }
+form { max-width: 410px; margin: 0 auto; text-align: left; }
+label { display: block; font-weight: 700; margin: 0 0 9px 3px; }
+input {
+  width: 100%;
+  padding: 16px 17px;
+  border: 2px solid #ead5f5;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition: border .2s, box-shadow .2s;
+}
+input:focus { border-color: var(--purple); box-shadow: 0 0 0 4px #8b5cf626; }
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  margin-top: 14px;
+  padding: 16px 20px;
+  background: linear-gradient(100deg, #ec4899, #8b5cf6);
+  color: white;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 22px #a855f640;
+  transition: transform .2s, filter .2s;
+}
+button:hover { transform: translateY(-2px); filter: brightness(1.04); }
+button:active { transform: translateY(0); }
+.error { min-height: 22px; color: #be185d; font-size: .9rem; text-align: center; margin: 12px 0 0; }
+.tiny-note { color: #9b7aa7; font-size: .85rem; margin: 24px 0 0; }
+.hidden { display: none; }
+.celebration { position: relative; overflow: hidden; }
+.confetti { font-size: 1.8rem; letter-spacing: .35rem; margin-bottom: 18px; animation: bob 2.4s ease-in-out infinite; }
+.big-emoji { font-size: clamp(3rem, 10vw, 5rem); margin: 12px 0; }
+h2 { color: #9333a7; font-family: 'Playfair Display', Georgia, serif; font-size: 2rem; margin: 8px 0 18px; }
+.message { color: #654b70; line-height: 1.8; font-size: 1rem; margin: 14px auto; max-width: 530px; }
+.success-banner {
+  margin: 28px 0;
+  padding: 23px 12px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  background: linear-gradient(110deg, #db2777, #9333ea);
+  box-shadow: 0 14px 28px #9333ea35;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.45rem, 5vw, 2.3rem);
+  line-height: 1.15;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+.success-banner span { font-family: sans-serif; font-size: 1.3rem; }
+.closing { margin: 28px 0 10px; color: #754b83; line-height: 1.8; }
+.closing strong { color: #a21caf; }
+.again-button { max-width: 240px; background: #f3e8ff; color: #7e22ce; box-shadow: none; border: 1px solid #e9d5ff; }
+footer { text-align: center; color: #9b7aa7; font-size: .8rem; padding: 20px 8px 4px; }
+@keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes glow { from { box-shadow: 0 10px 25px #9333ea25; } to { box-shadow: 0 12px 35px #db277755; } }
+@media (max-width: 480px) {
+  body { padding: 18px 12px 8px; }
+  .card { border-radius: 22px; }
+  .success-banner { gap: 7px; }
+  .message { font-size: .96rem; }
+}
